@@ -1,0 +1,35 @@
+# Spring Boot configuration
+spring:
+  profiles:
+    active: prod
+# Database
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: admin
+# JPA properties
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: false
+    database: PostgreSQL
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: false
+    generate-ddl: false
+# Logger configuration
+logging:
+  pattern:
+    console: "%d %-5level %logger : %msg%n"
+  level:
+    org.springframework: INFO
+    org.hibernate: INFO
+# Server configuration
+server:
+  port: 8080
+  sessionTimeout: 30
+# OpenWeather API
+  api:
+  app-id-key: 537b6e0756f89503b93938e6c700dade
+  weather-api-url: "http://api.openweathermap.org/data/2.5/weather?q={city}&APPID={app-id-key}"
+
