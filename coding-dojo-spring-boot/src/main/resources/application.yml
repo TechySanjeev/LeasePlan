@@ -6,8 +6,8 @@ spring:
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/postgres
-    username: postgres
-    password: admin
+    username: ****
+    password: ****
 # JPA properties
   jpa:
     hibernate:
@@ -30,6 +30,6 @@ server:
   sessionTimeout: 30
 # OpenWeather API
   api:
-  app-id-key: 537b6e0756f89503b93938e6c700dade
+  app-id-key: <APP-ID-KEY>
   weather-api-url: "http://api.openweathermap.org/data/2.5/weather?q={city}&APPID={app-id-key}"
 
